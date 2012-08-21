@@ -1,0 +1,17 @@
+{
+  "name": "Unread Twitter Extension",
+  "version": "2.0.5",
+  "description": "Marks read tweets and scrolls to new tweet in the list.",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*"],
+      "js": ["jquery.min.js", "color_unread_tweets.js"],
+	  "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+	"http://*/*",
+    "https://*/*"
+  ]
+}
